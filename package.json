@@ -1,0 +1,11 @@
+{
+  "name": "alfred-zettelkasten",
+  "version": "1.0.0",
+  "description": "Zettelkasten extension for Alfred",
+  "main": "index.js",
+  "author": "Dennis Muensterer",
+  "license": "MIT",
+  "dependencies": {
+    "alfy": "^0.10.0"
+  }
+}
