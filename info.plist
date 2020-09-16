@@ -657,7 +657,7 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string></string>
+				<string>Access zettelkasten functions</string>
 				<key>title</key>
 				<string>Zettelkasten</string>
 				<key>type</key>
@@ -744,7 +744,7 @@
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>- </string>
+				<string></string>
 				<key>passthroughargument</key>
 				<false/>
 				<key>variables</key>
