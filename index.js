@@ -1,9 +1,7 @@
 'use strict';
 const alfy = require('alfy');
-const atom = require('./src/atom');
-const search = require('./src/search');
-const web = require('./src/web');
-const newNote = require('./src/newNote');
+
+const {atom, newNote, search, web} = require('./src/options');
 
 const [input, ...restInput] = alfy.input.split(' ')
 const newCommand = ['new', 'n', 'ne', '', ' '].includes(input)
