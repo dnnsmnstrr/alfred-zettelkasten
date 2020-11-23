@@ -1,7 +1,9 @@
-const {getIcon, getAppIcon} = require('./icons');
+const {getIcon, getAppIcon} = require('./icons')
+
+const { BASE_URL } = process.env
 
 const web = {
-  arg: 'web',
+  arg: BASE_URL + '/zettelkasten',
   title: 'Web',
   autocomplete: 'web',
   subtitle: 'Go to the deployed Zettelkasten',
@@ -14,10 +16,9 @@ const web = {
     alt: {
       arg: 'https://github.com/dnnsmnstrr/zettelkasten',
       subtitle: 'Open in GitHub',
-      icon: getAppIcon('GitHub Desktop'),
+      icon: getAppIcon('GitHub Desktop')
     }
   }
 }
 
-
-module.exports = web;
+module.exports = web
