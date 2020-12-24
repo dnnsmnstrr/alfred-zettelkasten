@@ -17,17 +17,18 @@ const getTitle = () => {
   return 'titled: "' + currentTitle + '"'
 }
 
+const newNoteInput = newNote(getTitle(), tags, title ? title : input)
 const options = [
   search(title),
   web,
-  newNote(getTitle(), tags, title ? title : input),
+  newNoteInput,
   atom
 ]
 
 const items = alfy.matches(input, options, 'title');
 
 if (!items || items.length === 0) {
-  alfy.output(newNote);
+  alfy.output([newNoteInput]);
 } else {
   alfy.output(items);
 }

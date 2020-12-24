@@ -1327,9 +1327,21 @@ echo -n $(basename "${query%.*}")</string>
 						<key>words</key>
 						<true/>
 					</dict>
+					<dict>
+						<key>field</key>
+						<string>kMDItemTitle</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<false/>
+						<key>value</key>
+						<string>{query}</string>
+						<key>words</key>
+						<true/>
+					</dict>
 				</array>
 				<key>includesystem</key>
-				<false/>
+				<true/>
 				<key>keyword</key>
 				<string>zk</string>
 				<key>limit</key>
@@ -1339,6 +1351,7 @@ echo -n $(basename "${query%.*}")</string>
 				<key>scopes</key>
 				<array>
 					<string>~/zettelkasten</string>
+					<string>~/zettelkasten/notes</string>
 				</array>
 				<key>sortmode</key>
 				<integer>0</integer>
