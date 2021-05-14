@@ -1,7 +1,7 @@
 'use strict';
 const alfy = require('alfy');
 
-const {atom, newNote, search, web} = require('./src/options');
+const {newNote, search, ...restOptions} = require('./src/options');
 
 const [input, ...restInput] = alfy.input.split(' ')
 const newCommand = ['new', 'n', 'ne', '', ' '].includes(input)
@@ -17,18 +17,16 @@ const getTitle = () => {
   return 'titled: "' + currentTitle + '"'
 }
 
-const newNoteInput = newNote(getTitle(), tags, title ? title : input)
+const createNote = newNote(getTitle(), tags, title || input)
 const options = [
   search(title),
-  web,
-  newNoteInput,
-  atom
+  createNote,
+  ...Object.values(restOptions)
 ]
 
 const items = alfy.matches(input, options, 'title');
-
-if (!items || items.length === 0) {
-  alfy.output([newNoteInput]);
+if (!items || !items.length) {
+  alfy.output([createNote]);
 } else {
   alfy.output(items);
 }

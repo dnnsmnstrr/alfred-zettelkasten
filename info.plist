@@ -513,6 +513,18 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
+				<string>98DE63BC-980D-4935-82DC-ADA2448B4906</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>124E1184-0C99-424F-8ECC-4B45FD0DCB6F</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>7596905C-9B52-4FEE-BC66-F34019107603</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -1043,6 +1055,31 @@ tags:
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query="{query}"
+
+open -na Atom $query</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>477B4F3C-5CF8-42F4-A93D-F6037C39BEEE</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -1087,6 +1124,20 @@ tags:
 						<key>uid</key>
 						<string>BD5F311F-A6B8-4A8E-AAF8-050C597A184C</string>
 					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:split1}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>finder</string>
+						<key>outputlabel</key>
+						<string>finder</string>
+						<key>uid</key>
+						<string>124E1184-0C99-424F-8ECC-4B45FD0DCB6F</string>
+					</dict>
 				</array>
 				<key>elselabel</key>
 				<string>else</string>
@@ -1101,27 +1152,15 @@ tags:
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>query="{query}"
-
-open -na Atom $query</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
+				<key>path</key>
+				<string>{var:ZETTEL_DIR}</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.action.revealfile</string>
 			<key>uid</key>
-			<string>477B4F3C-5CF8-42F4-A93D-F6037C39BEEE</string>
+			<string>98DE63BC-980D-4935-82DC-ADA2448B4906</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1720,9 +1759,9 @@ tags:
 			<key>note</key>
 			<string>open in atom</string>
 			<key>xpos</key>
-			<integer>235</integer>
+			<integer>335</integer>
 			<key>ypos</key>
-			<integer>305</integer>
+			<integer>285</integer>
 		</dict>
 		<key>4863ED32-2C17-4E6D-9D6B-215C4EAB5E9E</key>
 		<dict>
@@ -1815,6 +1854,13 @@ tags:
 			<integer>1080</integer>
 			<key>ypos</key>
 			<integer>395</integer>
+		</dict>
+		<key>98DE63BC-980D-4935-82DC-ADA2448B4906</key>
+		<dict>
+			<key>xpos</key>
+			<integer>530</integer>
+			<key>ypos</key>
+			<integer>375</integer>
 		</dict>
 		<key>9ABCBE03-F846-4519-AE3A-97C679E5DC42</key>
 		<dict>

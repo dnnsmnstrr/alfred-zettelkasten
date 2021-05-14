@@ -1,9 +1,9 @@
 const alfy = require('alfy');
 
-const getAppIcon = (appName = 'Alfred') => {
+const getAppIcon = (appName = 'Alfred', path) => {
   return {
       type: 'fileicon',
-      path: `/Applications/${appName}.app`
+      path: path || `/Applications/${appName}.app`
   }
 }
 
