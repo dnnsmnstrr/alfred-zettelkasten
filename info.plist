@@ -830,7 +830,7 @@
 				<key>createintermediatefolders</key>
 				<false/>
 				<key>filename</key>
-				<string>~/zettelkasten/{var:title.lowercase.trim.stripdiacritics}.md</string>
+				<string>{var:ZETTEL_DIR}/{var:title.lowercase.trim.stripdiacritics}.md</string>
 				<key>filetext</key>
 				<string>---
 date: {date:yyyy-MM-dd}
