@@ -18,6 +18,7 @@ const getTitle = () => {
 }
 
 const createNote = newNote(getTitle(), tags, title || input)
+
 const options = [
   search(title),
   createNote,
