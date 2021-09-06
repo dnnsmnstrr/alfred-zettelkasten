@@ -203,6 +203,16 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>9C272BB4-D6A7-4A21-BC67-F1EC0DBBF68F</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Open in Finder</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>4CE2DE5B-D317-4DB1-BF36-A49FB012678F</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -252,6 +262,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>C2B62644-6263-4FFC-8181-021834ACCF3B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>4D4CBD9F-F23C-4BE1-81A6-B318F987E643</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9C272BB4-D6A7-4A21-BC67-F1EC0DBBF68F</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -500,6 +523,18 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>BD5F311F-A6B8-4A8E-AAF8-050C597A184C</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>4D4CBD9F-F23C-4BE1-81A6-B318F987E643</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>981881EA-BE88-4087-AEEA-E50AD58CFE5E</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -1069,55 +1104,6 @@ tags:
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>tags</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>./node_modules/.bin/run-node src/tags.js "$1"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string>Enter tags</string>
-				<key>title</key>
-				<string>Tags</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>6F9ABB73-4096-441F-823B-5FE7AE8E3C70</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -1168,6 +1154,20 @@ tags:
 						<key>matchcasesensitive</key>
 						<false/>
 						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>finder</string>
+						<key>outputlabel</key>
+						<string>finder</string>
+						<key>uid</key>
+						<string>981881EA-BE88-4087-AEEA-E50AD58CFE5E</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:split1}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
 						<integer>4</integer>
 						<key>matchstring</key>
 						<string>http</string>
@@ -1186,6 +1186,55 @@ tags:
 			<string>F20DABD6-2DA5-469B-AE06-E402D0B5B7E3</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>tags</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node src/tags.js "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Enter tags</string>
+				<key>title</key>
+				<string>Tags</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>6F9ABB73-4096-441F-823B-5FE7AE8E3C70</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1213,6 +1262,23 @@ tags:
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string>{var:ZETTEL_DIR}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>4D4CBD9F-F23C-4BE1-81A6-B318F987E643</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>browser</key>
 				<string></string>
 				<key>spaces</key>
@@ -1226,6 +1292,19 @@ tags:
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
 			<string>7596905C-9B52-4FEE-BC66-F34019107603</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>path</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.revealfile</string>
+			<key>uid</key>
+			<string>9C272BB4-D6A7-4A21-BC67-F1EC0DBBF68F</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1275,6 +1354,21 @@ tags:
 			<string>C2A12B8E-31FC-4829-A481-A661C477E3A9</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>openwith</key>
+				<string></string>
+				<key>sourcefile</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>955E3AB8-3A45-4193-9419-7FA4BF61FD88</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1387,21 +1481,6 @@ tags:
 			<string>4CE2DE5B-D317-4DB1-BF36-A49FB012678F</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>openwith</key>
-				<string></string>
-				<key>sourcefile</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
-			<key>uid</key>
-			<string>955E3AB8-3A45-4193-9419-7FA4BF61FD88</string>
-			<key>version</key>
-			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1654,9 +1733,9 @@ tags:
 		<key>0895EB00-0D0B-4843-8CBE-BDACAF5308D4</key>
 		<dict>
 			<key>xpos</key>
-			<integer>320</integer>
+			<integer>300</integer>
 			<key>ypos</key>
-			<integer>425</integer>
+			<integer>470</integer>
 		</dict>
 		<key>1396EC67-8E9F-41E7-8B51-6337CBB241F1</key>
 		<dict>
@@ -1734,16 +1813,16 @@ tags:
 			<key>xpos</key>
 			<integer>365</integer>
 			<key>ypos</key>
-			<integer>530</integer>
+			<integer>550</integer>
 		</dict>
 		<key>477B4F3C-5CF8-42F4-A93D-F6037C39BEEE</key>
 		<dict>
 			<key>note</key>
 			<string>open in atom</string>
 			<key>xpos</key>
-			<integer>525</integer>
+			<integer>690</integer>
 			<key>ypos</key>
-			<integer>350</integer>
+			<integer>345</integer>
 		</dict>
 		<key>4863ED32-2C17-4E6D-9D6B-215C4EAB5E9E</key>
 		<dict>
@@ -1755,16 +1834,23 @@ tags:
 		<key>489E8C63-6B43-4E60-8B70-13ED646E0172</key>
 		<dict>
 			<key>xpos</key>
-			<integer>320</integer>
+			<integer>300</integer>
 			<key>ypos</key>
-			<integer>455</integer>
+			<integer>500</integer>
 		</dict>
 		<key>4CE2DE5B-D317-4DB1-BF36-A49FB012678F</key>
 		<dict>
 			<key>xpos</key>
-			<integer>530</integer>
+			<integer>550</integer>
 			<key>ypos</key>
-			<integer>535</integer>
+			<integer>560</integer>
+		</dict>
+		<key>4D4CBD9F-F23C-4BE1-81A6-B318F987E643</key>
+		<dict>
+			<key>xpos</key>
+			<integer>405</integer>
+			<key>ypos</key>
+			<integer>390</integer>
 		</dict>
 		<key>546A06C7-2FCF-4D0C-B604-CDB7C30F46D6</key>
 		<dict>
@@ -1799,9 +1885,9 @@ tags:
 		<key>7596905C-9B52-4FEE-BC66-F34019107603</key>
 		<dict>
 			<key>xpos</key>
-			<integer>160</integer>
+			<integer>115</integer>
 			<key>ypos</key>
-			<integer>405</integer>
+			<integer>395</integer>
 		</dict>
 		<key>81C8D085-91B4-4125-A43F-7DD507BDE5BD</key>
 		<dict>
@@ -1829,9 +1915,16 @@ tags:
 		<key>9ABCBE03-F846-4519-AE3A-97C679E5DC42</key>
 		<dict>
 			<key>xpos</key>
-			<integer>30</integer>
+			<integer>10</integer>
 			<key>ypos</key>
-			<integer>610</integer>
+			<integer>630</integer>
+		</dict>
+		<key>9C272BB4-D6A7-4A21-BC67-F1EC0DBBF68F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>545</integer>
+			<key>ypos</key>
+			<integer>420</integer>
 		</dict>
 		<key>A61CEF0B-30D9-4705-BBD1-3B8E2166833F</key>
 		<dict>
@@ -1843,9 +1936,9 @@ tags:
 		<key>AF6B0FE6-3747-4548-9328-2A1C7CA930CE</key>
 		<dict>
 			<key>xpos</key>
-			<integer>750</integer>
+			<integer>800</integer>
 			<key>ypos</key>
-			<integer>605</integer>
+			<integer>625</integer>
 		</dict>
 		<key>B679CF41-D969-422A-B2BA-358F5ADD5B3A</key>
 		<dict>
@@ -1881,18 +1974,18 @@ tags:
 		<key>C2A12B8E-31FC-4829-A481-A661C477E3A9</key>
 		<dict>
 			<key>xpos</key>
-			<integer>30</integer>
+			<integer>10</integer>
 			<key>ypos</key>
-			<integer>500</integer>
+			<integer>515</integer>
 		</dict>
 		<key>C2B62644-6263-4FFC-8181-021834ACCF3B</key>
 		<dict>
 			<key>note</key>
 			<string>strip file ending</string>
 			<key>xpos</key>
-			<integer>615</integer>
+			<integer>630</integer>
 			<key>ypos</key>
-			<integer>605</integer>
+			<integer>615</integer>
 		</dict>
 		<key>C8D67054-EF3F-43F1-9447-C71F7428F2A7</key>
 		<dict>
@@ -1925,9 +2018,9 @@ tags:
 		<key>F20DABD6-2DA5-469B-AE06-E402D0B5B7E3</key>
 		<dict>
 			<key>xpos</key>
-			<integer>75</integer>
+			<integer>60</integer>
 			<key>ypos</key>
-			<integer>310</integer>
+			<integer>280</integer>
 		</dict>
 		<key>F8EE3BE5-AA28-424E-80C9-CC0E80B2D503</key>
 		<dict>

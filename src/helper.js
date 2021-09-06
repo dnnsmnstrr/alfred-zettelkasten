@@ -30,10 +30,10 @@ const makeOption = ({ name, subtitle, autocomplete, icon, iconPath, mods }) => (
 })
 
 // icons
-const getAppIcon = (appName = 'Alfred 4') => {
+const getAppIcon = (appName = 'Alfred 4', path) => {
 	return {
 		type: 'fileicon',
-		path: `/Applications/${appName}.app`
+		path: path || `/Applications/${appName}.app`
 	}
 }
 
