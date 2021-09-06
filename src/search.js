@@ -1,6 +1,6 @@
-const {getIcon} = require('./icons');
+const {getIcon} = require('./helper');
 
-const search = (title) => {
+const search = (title = '') => {
   return {
     arg: 'search/' + (title ? title : ''),
     title: 'Search',

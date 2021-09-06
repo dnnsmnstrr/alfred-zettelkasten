@@ -1,4 +1,4 @@
-const {getIcon} = require('./icons');
+const {getIcon} = require('./helper');
 
 const newNote = (title, tags, input) => {
   return {

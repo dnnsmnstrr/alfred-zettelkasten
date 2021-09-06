@@ -1,54 +1,84 @@
-const alfy = require('alfy');
+const alfy = require('alfy')
 
+// input
+const env = process.env
+const splitInput = (splitter = ' ', input = alfy.input) => {
+  return input.split(splitter)
+}
+
+// options
+const makeMods = (options = []) => {
+  if (!Array.isArray(options)) {
+    // default to command for single option
+    options = [options]
+  }
+  const modOrder = ['cmd', 'alt', 'ctrl', 'fn', 'shift']
+  const mods = {}
+  options.forEach((option, i) => {
+    mods[modOrder[i]] = option
+  })
+  return mods
+}
+
+const makeOption = ({ name, subtitle, autocomplete, icon, iconPath, mods }) => ({
+  arg: name.toLowerCase(),
+  title: name,
+  subtitle: subtitle || 'Open Zettelkasten in ' + name,
+  autocomplete: autocomplete || name.toLowerCase(),
+  icon: icon || getAppIcon(name, iconPath),
+  mods: makeMods(mods)
+})
+
+// icons
 const getAppIcon = (appName = 'Alfred 4') => {
 	return {
 		type: 'fileicon',
 		path: `/Applications/${appName}.app`
-	};
-};
+	}
+}
 
 const getIcon = (icon = 'AlertCautionIcon') => {
 	return {
 		path: alfy.icon.get(icon)
-	};
-};
+	}
+}
 
 const getAsset = assetName => {
 	return {
 		path: `./assets/${assetName}.png`
-	};
-};
-
-function splitInput(splitter = ' ', input = alfy.input) {
-	return input.split(splitter);
+	}
 }
 
+
+// utility
 function capitalize(str) {
-	return str[0].toUpperCase() + str.slice(1);
+	return str[0].toUpperCase() + str.slice(1)
 }
 
 function isValidUrl(string) {
 	try {
-		new URL(string);
+		new URL(string)
 	} catch (_) {
-		return false;
+		return false
 	}
 
-	return true;
+	return true
 }
 
 module.exports = {
 	getIcon,
 	getAppIcon,
 	getAsset,
+  makeOption,
 	capitalize,
 	splitInput,
-	isValidUrl
-};
+	isValidUrl,
+  env
+}
 
 /*
 IMPORT:
-const {splitInput} = require('./helper');
+const {splitInput} = require('./helper')
 
 USAGE:
 const [command, ...restInput] = splitInput()

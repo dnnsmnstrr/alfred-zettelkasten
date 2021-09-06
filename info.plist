@@ -1249,25 +1249,6 @@ tags:
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>{var:BASE_URL}/zettelkasten/{query}</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>AF6B0FE6-3747-4548-9328-2A1C7CA930CE</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string>{var:split2}</string>
 				<key>passthroughargument</key>
@@ -1292,36 +1273,6 @@ tags:
 			<string>alfred.workflow.trigger.fallback</string>
 			<key>uid</key>
 			<string>C2A12B8E-31FC-4829-A481-A661C477E3A9</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:split2}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>1</integer>
-						<key>matchstring</key>
-						<string>web</string>
-						<key>outputlabel</key>
-						<string>open</string>
-						<key>uid</key>
-						<string>054297EE-2271-40A9-AB97-6C127A67E4D3</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>web</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>4CE2DE5B-D317-4DB1-BF36-A49FB012678F</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1410,6 +1361,36 @@ tags:
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:split2}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>1</integer>
+						<key>matchstring</key>
+						<string>web</string>
+						<key>outputlabel</key>
+						<string>open</string>
+						<key>uid</key>
+						<string>054297EE-2271-40A9-AB97-6C127A67E4D3</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>web</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>4CE2DE5B-D317-4DB1-BF36-A49FB012678F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>openwith</key>
 				<string></string>
 				<key>sourcefile</key>
@@ -1446,6 +1427,25 @@ echo -n $(basename "${query%.*}")</string>
 			<string>C2B62644-6263-4FFC-8181-021834ACCF3B</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{var:BASE_URL}/zettelkasten/{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>AF6B0FE6-3747-4548-9328-2A1C7CA930CE</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1764,7 +1764,7 @@ tags:
 			<key>xpos</key>
 			<integer>530</integer>
 			<key>ypos</key>
-			<integer>510</integer>
+			<integer>535</integer>
 		</dict>
 		<key>546A06C7-2FCF-4D0C-B604-CDB7C30F46D6</key>
 		<dict>
@@ -1776,9 +1776,9 @@ tags:
 		<key>62C60BF1-41B7-4525-BD52-A878D395A3B0</key>
 		<dict>
 			<key>xpos</key>
-			<integer>370</integer>
+			<integer>365</integer>
 			<key>ypos</key>
-			<integer>255</integer>
+			<integer>270</integer>
 		</dict>
 		<key>6B1EEDEA-94E6-4A34-8D10-4C1A7C38DA57</key>
 		<dict>
@@ -1843,9 +1843,9 @@ tags:
 		<key>AF6B0FE6-3747-4548-9328-2A1C7CA930CE</key>
 		<dict>
 			<key>xpos</key>
-			<integer>810</integer>
+			<integer>750</integer>
 			<key>ypos</key>
-			<integer>425</integer>
+			<integer>605</integer>
 		</dict>
 		<key>B679CF41-D969-422A-B2BA-358F5ADD5B3A</key>
 		<dict>
@@ -1890,14 +1890,14 @@ tags:
 			<key>note</key>
 			<string>strip file ending</string>
 			<key>xpos</key>
-			<integer>620</integer>
+			<integer>615</integer>
 			<key>ypos</key>
 			<integer>605</integer>
 		</dict>
 		<key>C8D67054-EF3F-43F1-9447-C71F7428F2A7</key>
 		<dict>
 			<key>xpos</key>
-			<integer>530</integer>
+			<integer>520</integer>
 			<key>ypos</key>
 			<integer>240</integer>
 		</dict>
