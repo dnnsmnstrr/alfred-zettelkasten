@@ -1,19 +1,19 @@
-const {getIcon} = require('./helper');
+const { getIcon } = require('./helper')
 
 const newNote = (title, tags, input) => {
+  const arg = `new/tags/${input}/${tags}`
   return {
-    arg: `new/${input}`,
+    arg,
     title: 'New Zettel',
     autocomplete: 'new ',
-    subtitle: `Create a new note ${title}`,
+    subtitle: `Create a new note ${title}${tags && tags.length ? ' with tags ' + tags : ''}`,
     icon: getIcon('ClippingUnknown'),
     mods: {
-      ...(!!tags && {cmd: {
+      cmd: {
+        arg,
         valid: true,
-        arg: `new/tags/${input}/${tags}`,
         subtitle: `Create a new note ${title} with tags ${tags}`
-      }})
-      ,
+      },
       alt: {
         valid: true,
         arg: `new/neuron/${input}`,
@@ -23,5 +23,4 @@ const newNote = (title, tags, input) => {
   }
 }
 
-
-module.exports = newNote;
+module.exports = newNote

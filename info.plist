@@ -40,7 +40,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>1DA4C72E-5346-4F2E-9AC1-B716AA845428</string>
+				<string>801E5109-7AAD-4D62-8947-1F32FCD37DA7</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -104,7 +104,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>D76EC21A-F305-43CB-81B2-A24A46EA530D</string>
+				<string>81C8D085-91B4-4125-A43F-7DD507BDE5BD</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -345,6 +345,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>801E5109-7AAD-4D62-8947-1F32FCD37DA7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1DA4C72E-5346-4F2E-9AC1-B716AA845428</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>81C8D085-91B4-4125-A43F-7DD507BDE5BD</key>
 		<array>
 			<dict>
@@ -480,19 +493,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>BA5C5E9C-E11B-40A8-8B23-8478846FE192</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>D76EC21A-F305-43CB-81B2-A24A46EA530D</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>81C8D085-91B4-4125-A43F-7DD507BDE5BD</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -828,30 +828,13 @@
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>{var:split2}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>D76EC21A-F305-43CB-81B2-A24A46EA530D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
+				<string>{var:split3}</string>
 				<key>passthroughargument</key>
 				<false/>
 				<key>variables</key>
 				<dict>
 					<key>title</key>
-					<string>{query}</string>
+					<string>{var:split2}</string>
 				</dict>
 			</dict>
 			<key>type</key>
@@ -927,9 +910,7 @@
 				<string>{var:ZETTEL_DIR}/{var:title.lowercase.trim.stripdiacritics}.md</string>
 				<key>filetext</key>
 				<string>---
-date: {date:yyyy-MM-dd}
-tags:
-{query}
+date: {date:yyyy-MM-dd}{query}
 ---
 
 # {var:title.capitals}
@@ -1047,6 +1028,37 @@ tags:
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>45</integer>
+				<key>hotmod</key>
+				<integer>1572864</integer>
+				<key>hotstring</key>
+				<string>N</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>62C60BF1-41B7-4525-BD52-A878D395A3B0</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>browser</key>
 				<string></string>
 				<key>spaces</key>
@@ -1082,37 +1094,6 @@ tags:
 			<string>BA5C5E9C-E11B-40A8-8B23-8478846FE192</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>hotkey</key>
-				<integer>45</integer>
-				<key>hotmod</key>
-				<integer>1572864</integer>
-				<key>hotstring</key>
-				<string>N</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>62C60BF1-41B7-4525-BD52-A878D395A3B0</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1727,9 +1708,7 @@ ztl{cursor}</string>
 				<true/>
 				<key>clipboardtext</key>
 				<string>---
-date: {date:yyyy-MM-dd}
-tags:
-{query}
+date: {date:yyyy-MM-dd}{query}
 ---
 
 # {var:title.capitalcase}
@@ -1746,6 +1725,19 @@ tags:
 			<string>546A06C7-2FCF-4D0C-B604-CDB7C30F46D6</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>seconds</key>
+				<string>0.2</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.delay</string>
+			<key>uid</key>
+			<string>801E5109-7AAD-4D62-8947-1F32FCD37DA7</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1799,7 +1791,7 @@ Editing/writing is done in Atom with the atom-notes package (https://atom.io/pac
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>xpos</key>
-			<integer>400</integer>
+			<integer>620</integer>
 			<key>ypos</key>
 			<integer>760</integer>
 		</dict>
@@ -1907,16 +1899,18 @@ Editing/writing is done in Atom with the atom-notes package (https://atom.io/pac
 		<key>546A06C7-2FCF-4D0C-B604-CDB7C30F46D6</key>
 		<dict>
 			<key>xpos</key>
-			<integer>695</integer>
+			<integer>915</integer>
 			<key>ypos</key>
 			<integer>760</integer>
 		</dict>
 		<key>62C60BF1-41B7-4525-BD52-A878D395A3B0</key>
 		<dict>
+			<key>note</key>
+			<string>Quickly access or create new zettel</string>
 			<key>xpos</key>
-			<integer>365</integer>
+			<integer>385</integer>
 			<key>ypos</key>
-			<integer>270</integer>
+			<integer>240</integer>
 		</dict>
 		<key>6B1EEDEA-94E6-4A34-8D10-4C1A7C38DA57</key>
 		<dict>
@@ -1941,19 +1935,26 @@ Editing/writing is done in Atom with the atom-notes package (https://atom.io/pac
 			<key>ypos</key>
 			<integer>415</integer>
 		</dict>
+		<key>801E5109-7AAD-4D62-8947-1F32FCD37DA7</key>
+		<dict>
+			<key>xpos</key>
+			<integer>495</integer>
+			<key>ypos</key>
+			<integer>790</integer>
+		</dict>
 		<key>81C8D085-91B4-4125-A43F-7DD507BDE5BD</key>
 		<dict>
 			<key>note</key>
 			<string>set title</string>
 			<key>xpos</key>
-			<integer>835</integer>
+			<integer>830</integer>
 			<key>ypos</key>
-			<integer>100</integer>
+			<integer>80</integer>
 		</dict>
 		<key>84EA7B26-2031-45CE-A610-0264CB36D847</key>
 		<dict>
 			<key>xpos</key>
-			<integer>525</integer>
+			<integer>745</integer>
 			<key>ypos</key>
 			<integer>790</integer>
 		</dict>
@@ -1981,7 +1982,7 @@ Editing/writing is done in Atom with the atom-notes package (https://atom.io/pac
 		<key>A61CEF0B-30D9-4705-BBD1-3B8E2166833F</key>
 		<dict>
 			<key>xpos</key>
-			<integer>570</integer>
+			<integer>790</integer>
 			<key>ypos</key>
 			<integer>760</integer>
 		</dict>
@@ -2043,6 +2044,8 @@ Editing/writing is done in Atom with the atom-notes package (https://atom.io/pac
 		</dict>
 		<key>C8D67054-EF3F-43F1-9447-C71F7428F2A7</key>
 		<dict>
+			<key>note</key>
+			<string>Search using atom-notes</string>
 			<key>xpos</key>
 			<integer>520</integer>
 			<key>ypos</key>
@@ -2061,13 +2064,6 @@ Editing/writing is done in Atom with the atom-notes package (https://atom.io/pac
 			<integer>505</integer>
 			<key>ypos</key>
 			<integer>190</integer>
-		</dict>
-		<key>D76EC21A-F305-43CB-81B2-A24A46EA530D</key>
-		<dict>
-			<key>xpos</key>
-			<integer>640</integer>
-			<key>ypos</key>
-			<integer>70</integer>
 		</dict>
 		<key>F20DABD6-2DA5-469B-AE06-E402D0B5B7E3</key>
 		<dict>

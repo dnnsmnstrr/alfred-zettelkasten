@@ -1,21 +1,23 @@
-'use strict';
-const alfy = require('alfy');
+'use strict'
+const alfy = require('alfy')
 
-const tags = alfy.input && alfy.input.split(',')
-const query = process.argv[2]; // query
-const {title} = process.env; // environment variables
+const tags = alfy.input.split(',')
+const { title } = process.env // environment variables
 
+const tagString = `
+tags:
+` + tags.map((tag) => '- ' + tag.trim())
 
-const tagString = tags.map((tag) => '- ' + tag.trim())
-const addTags =
-  {
-    arg: tagString,
-    title: title ? `Add Tags for Zettel "${title}"` : 'Add Tags',
-    subtitle: (!tags || tags.length === 0) ? 'Enter comma separated tags' : 'Add the listed tags',
-    icon: {
-        path: alfy.icon.get('AlertNoteIcon')
-    }
+const hasEnteredTag = tags && tags.length && tags[0] !== ''
+
+const addTags = {
+  arg: hasEnteredTag ? tagString : '',
+  title: title ? `Add Tags for Zettel "${title}"` : 'Add Tags',
+  subtitle: hasEnteredTag ? 'Add the listed tags' : 'Enter comma separated tags',
+  icon: {
+    path: alfy.icon.get('AlertNoteIcon')
   }
+}
 
 alfy.output([addTags, ...tags.map((tag) => {
   return {
@@ -23,4 +25,4 @@ alfy.output([addTags, ...tags.map((tag) => {
     arg: tagString,
     valid: false
   }
-})]);
+})])
