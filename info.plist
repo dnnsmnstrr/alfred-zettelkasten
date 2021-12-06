@@ -573,6 +573,18 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>F7599DC5-1C5E-4D5A-8A2D-2D47DEF116E3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>FA4A8BCB-0F36-46D8-9BB1-CB1533145EE4</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 		<key>F8EE3BE5-AA28-424E-80C9-CC0E80B2D503</key>
 		<array>
@@ -1098,53 +1110,6 @@ date: {date:yyyy-MM-dd}{query}
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>./node_modules/.bin/run-node src/tags.js "$1"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string>Enter tags</string>
-				<key>title</key>
-				<string>Tags</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>6F9ABB73-4096-441F-823B-5FE7AE8E3C70</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -1217,6 +1182,20 @@ date: {date:yyyy-MM-dd}{query}
 						<key>uid</key>
 						<string>62434126-2AB8-4BE5-BD30-87D2CD704DDA</string>
 					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:split1}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>dendron</string>
+						<key>outputlabel</key>
+						<string>dendron</string>
+						<key>uid</key>
+						<string>FA4A8BCB-0F36-46D8-9BB1-CB1533145EE4</string>
+					</dict>
 				</array>
 				<key>elselabel</key>
 				<string>else</string>
@@ -1227,6 +1206,53 @@ date: {date:yyyy-MM-dd}{query}
 			<string>F20DABD6-2DA5-469B-AE06-E402D0B5B7E3</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node src/tags.js "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Enter tags</string>
+				<key>title</key>
+				<string>Tags</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>6F9ABB73-4096-441F-823B-5FE7AE8E3C70</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1303,6 +1329,22 @@ open -na Atom $HOME/zettelkasten</string>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
 			<string>7596905C-9B52-4FEE-BC66-F34019107603</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>cd {var:ZETTEL_DIR}
+code .</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.terminalcommand</string>
+			<key>uid</key>
+			<string>F7599DC5-1C5E-4D5A-8A2D-2D47DEF116E3</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1483,6 +1525,7 @@ open -na Atom $HOME/zettelkasten</string>
 				<string></string>
 				<key>scopes</key>
 				<array>
+					<string>~/zettelkasten</string>
 					<string>~/zettelkasten/notes</string>
 				</array>
 				<key>sortmode</key>
@@ -1496,7 +1539,7 @@ open -na Atom $HOME/zettelkasten</string>
 					<string>net.daringfireball.markdown</string>
 				</array>
 				<key>withspace</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.filefilter</string>
@@ -1802,9 +1845,9 @@ Editing/writing is done in Atom with the atom-notes package (https://atom.io/pac
 			<key>note</key>
 			<string>strip query</string>
 			<key>xpos</key>
-			<integer>65</integer>
+			<integer>60</integer>
 			<key>ypos</key>
-			<integer>215</integer>
+			<integer>220</integer>
 		</dict>
 		<key>270954E5-2F2D-45A3-8FCD-BB4C5992731B</key>
 		<dict>
@@ -1931,9 +1974,9 @@ Editing/writing is done in Atom with the atom-notes package (https://atom.io/pac
 		<key>7596905C-9B52-4FEE-BC66-F34019107603</key>
 		<dict>
 			<key>xpos</key>
-			<integer>145</integer>
+			<integer>135</integer>
 			<key>ypos</key>
-			<integer>415</integer>
+			<integer>410</integer>
 		</dict>
 		<key>801E5109-7AAD-4D62-8947-1F32FCD37DA7</key>
 		<dict>
@@ -2068,9 +2111,16 @@ Editing/writing is done in Atom with the atom-notes package (https://atom.io/pac
 		<key>F20DABD6-2DA5-469B-AE06-E402D0B5B7E3</key>
 		<dict>
 			<key>xpos</key>
-			<integer>55</integer>
+			<integer>30</integer>
 			<key>ypos</key>
-			<integer>305</integer>
+			<integer>285</integer>
+		</dict>
+		<key>F7599DC5-1C5E-4D5A-8A2D-2D47DEF116E3</key>
+		<dict>
+			<key>xpos</key>
+			<integer>385</integer>
+			<key>ypos</key>
+			<integer>420</integer>
 		</dict>
 		<key>F8EE3BE5-AA28-424E-80C9-CC0E80B2D503</key>
 		<dict>
@@ -2110,7 +2160,7 @@ Editing/writing is done in Atom with the atom-notes package (https://atom.io/pac
 		<string>https://dnnsmnstrr.github.io</string>
 		<key>DELIMITER</key>
 		<string>/</string>
-		<key>DEPLOYMENT_PATH</key>
+		<key>PROJECT_PATH</key>
 		<string>dnnsmnstrr/zettelkasten</string>
 		<key>ZETTEL_DIR</key>
 		<string>~/zettelkasten/notes</string>

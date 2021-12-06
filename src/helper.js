@@ -20,8 +20,8 @@ const makeMods = (options = []) => {
   return mods
 }
 
-const makeOption = ({ name, subtitle, autocomplete, icon, iconPath, mods }) => ({
-  arg: name.toLowerCase(),
+const makeOption = ({ name, arg, subtitle, autocomplete, icon, iconPath, mods }) => ({
+  arg: arg || name.toLowerCase(),
   title: name,
   subtitle: subtitle || 'Open Zettelkasten in ' + name,
   autocomplete: autocomplete || name.toLowerCase(),
