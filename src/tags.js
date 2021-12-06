@@ -6,7 +6,7 @@ const { title } = process.env // environment variables
 
 const tagString = `
 tags:
-` + tags.map((tag) => '- ' + tag.trim())
+` + tags.map((tag) => '- ' + tag.trim()).join('\n')
 
 const hasEnteredTag = tags && tags.length && tags[0] !== ''
 
